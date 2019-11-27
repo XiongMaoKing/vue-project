@@ -1,0 +1,92 @@
+// 页面的一些样式重置  公用样式
+// 定义一些常用的颜色
+@jd_color: #e43130;
+@bgColor: #f6f6f6;
+@color: #333;
+
+// 对于移动端的一些旧的内核浏览器 做兼容处理 要加浏览器前缀
+// 定义一个混入
+.pre(@style,@val) {
+  @{style}: @val;
+  -webkit-@{style}: @val;
+  -moz-@{style}: @val;
+  -ms-@{style}: @val;
+  -o-@{style}: @val;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  // 在移动端 如果执行垂直水平滑动  阻止垂直滚动条滚动事件触发 相当于在水平滑动的时候 阻止了滚动条的默认行为
+  touch-action: none;
+  .pre(box-sizing,border-box);
+  // 移动端有一些控件 选择框 按钮 默认会有一些外观 设置为none
+  .pre(appearance, none);
+}
+body {
+  font-size: 14px;
+  //  字体设置完毕之后 默认会先找第一个字体 如果找不多 依次找后面的设备默认字体
+  font-family: "Microsoft YaHei", Helvetica,sans-serif; 
+  color: #666;
+  background-color: @bgColor;
+  padding-bottom: 53px;
+}
+
+a {
+  // 在移动端的 webkit内核浏览器下 有一个点击高亮的显示 要把去掉
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: @color;
+  &:hover {
+    color: @color;
+  }
+}
+ol,ul {
+  list-style: none;
+}
+input,textarea {
+  outline: none;
+  border: none;
+  // 文本域 禁止重置大小
+  resize: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+em,i {
+  font-style: normal;
+}
+strong,b {
+  font-weight: normal;
+}
+
+// 设置一些公用样式
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+.clearfix {
+  zoom: 1;
+  &::after {
+    display: block;
+    content: "";
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    font-size: 0;
+  }
+}
+// 拿过来一个京东的自己定义字体的代码
+@font-face {
+  font-family: JDZhengHT-EN-Bold;
+  src: url(https://wq.360buyimg.com/data/ppms/others/JDZhengHei_01_Bold.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal
+}

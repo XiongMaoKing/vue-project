@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box,
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        
+        #box2 {
+            background-color: green;
+        }
+    </style>
+</head>
+<!-- 
+   zepto: 移动端的js 库  api 和jquery非常类似 但是它体积更小 适合现代化浏览器 压缩版 9.6k
+
+   zepto 模块化定制的一个库   默认会有很多模块文件 你可以通过一些操作来定制
+
+   zepto.js （5个模块 zepto  event ajax  ie  form）
+
+ -->
+
+
+<!-- 这个默认的zepto.js   -->
+<script src="zepto.js"></script>
+<!-- <script src="fx.js"></script>
+<script src="fx_methods.js"></script>
+<script src="touch.js"></script> -->
+<script>
+    // 入口函数
+    $(function() {
+        console.log(123);
+
+        $('input').eq(0).on("tap", function() {
+            // alert($(this).val())
+
+            $('#box').animate({
+                width: 200,
+                height: 200,
+                backgroundColor: "blue"
+            }, 2000);
+
+            $('#box2').fadeOut(2000);
+
+        });
+    });
+</script>
+
+<body>
+    <input type="button" value="按钮">
+    <div id="box"></div>
+    <div id="box2"></div>
+</body>
+
+</html>

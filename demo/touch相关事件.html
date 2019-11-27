@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+
+</body>
+<script>
+    //  click  单击事件：  默认有一个延迟时间 200～300ms   ( 双击  两次单击)
+    //  用户体验不佳 在移动端 手势操作
+
+    //  touch事件 ：
+    //  touchstart 手指开始触碰屏幕的时候 触发
+    //  touchmove 手指触碰之后的滑动 持续触发 
+    //  touchend 手指离开屏幕 触发这个事件
+    //  touchcancel: 手指触碰屏幕 突然中断的时候触发
+    //  addEventListener()
+
+    var oBox = document.querySelector('#box');
+
+    oBox.addEventListener('touchstart', function(e) {
+        console.log('手指开始触碰了');
+        console.log(e);
+        //changedTouches: 当前事件的前后 有哪些变化的手指（存起来）
+        // targetTouches: 当前目标元素 身上 的 手指数量
+        // touches 当前整个页面 上 总共放的手指数量
+        // touchlist 
+        console.log(e.touches[0].clientX, e.touches[0].clientY);
+
+
+
+    })
+    oBox.addEventListener('touchmove', function(e) {
+        console.log('手指正在滑动');
+        console.log(e.touches[0].clientX, e.touches[0].clientY);
+
+    })
+    oBox.addEventListener('touchend', function(e) {
+        console.log('手指离开屏幕啦');
+
+    })
+    oBox.addEventListener('touchcancel', function() {
+        console.log('手指事件中断啦');
+
+    })
+
+    // 原生 移动端没有提供一个完成的点按事件 （touchstart touchend ===> tap）
+    // 封装一下tap事件 1 模拟出一个完整的点按事件 （不允许移动）  2 比click延迟要快的多  用户体验好
+
+
+
+    // click   mousedown + mouseup
+    oBox.addEventListener('click', function() {
+        console.log('click事件触发啦');
+
+    })
+
+    // setTimeout(function() {
+    //     alert('hahah 弹出框啦')
+    // }, 5000);
+</script>
+
+</html>

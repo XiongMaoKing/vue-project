@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box"></div>
+
+</body>
+<script>
+    // 原生 移动端没有提供一个完成的点按事件 （touchstart touchend ===> tap）
+    // 封装一下tap事件 1 模拟出一个完整的点按事件 （不允许移动）  2 比click延迟要快的多  用户体验好  click 200~300ms
+    var oBox = document.querySelector('#box');
+
+    // tap 函数  参数1   添加的事件的目标对象   参数2 做什么事件
+    tap(oBox, function(e) {
+
+        console.log(e);
+        console.log(this);
+        console.log('哈哈 触发自定义tap事件啦');
+
+
+    });
+
+
+    function tap(obj, callback) {
+        // console.log(typeof obj);
+
+        if (obj && typeof obj == "object") {
+
+
+            // 1 模拟出一个完整的点按事件 （不允许移动）   用一个开关  假设没有滑动 如果你滑动啦 触发滑动事件阿 则改开关 最终判断的是开关
+            //2 比click延迟要快的多  用户体验好  click 200~300ms   统计事件差
+            var isMove = false;
+            var startTime = 0;
+            obj.addEventListener("touchstart", function() {
+                startTime = Date.now(); // 毫秒数
+            });
+            obj.addEventListener("touchmove", function() {
+                isMove = true;
+            });
+            obj.addEventListener("touchend", function(e) {
+
+                // 判断 到底是不是一个正确的完整的tap事件
+                if (!isMove && ((Date.now() - startTime) < 150)) {
+                    (typeof callback == 'function') && callback.call(this, e);
+                }
+
+            });
+        }
+
+
+    }
+</script>
+
+</html>

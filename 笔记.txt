@@ -1,0 +1,139 @@
+京东移动端
+rem + flex-box  + 浮动 + 百分比布局  + 固定像素px
+
+less  easyless 实现
+
+nodeJs--live-server 开启一个本地服务器 -- 浏览器自动刷新
+npm  install  live-server -g
+
+目录： css   img   js   index.html
+
+
+项目页面分析：
+1 顶部有一个搜索区域   (两边固定像素  中间百分比 高度 44px)
+  2倍图出来
+
+    header  (高度44 颜色 京东红) 100%；
+        >  header_con  相对定位  左右padding 44px
+                  a   绝对定位 脱离文档流  图标base64
+                    
+                   
+                   div ： 100%；白色的圆角矩形   相对定位  overflow:hidden;
+                       i  图标 绝对定位  中间小线 用右边框  （为了让线拉开距离 加padding-right）
+                       i  图片 绝对定位
+                       input   w: 100%   左填充  里面的实际内容文字从66px
+
+
+                  a绝对定位 脱离文档流  登陆
+
+
+2 轮播图区域:
+    div.jd_lunbo   紫色背景图
+
+        ul 加定位 z-index:2   width: 100% *10
+        
+            > li 浮动 10%
+            
+                  >a  给定宽  display:block 圆角 外边距 居中
+                      >img： width: 100%
+
+        div.nav  
+            ol >li 小矩形 默认情况下 半透明  w:8
+               .active {  透明度1 w:12 }
+
+3 导航列表区域:
+  div.nav_list
+
+      div.nav_list_con
+
+          section  display:flex;
+                a  * 5  flex:1   display:flex
+                    flex-direction: column
+                    justify-content: space-around;
+                    align-items: center;
+
+                    span 图标  2倍图
+                        background-size
+
+                    span 文字
+
+          section 
+                a * 5
+      
+      
+      div.nav_list_con
+
+
+4 广告
+
+5 京东秒杀
+
+    section.jd_kill
+	div.title
+	      h3    strong   div.time
+
+	div.con
+		ul li*8 
+		     img
+                               div.text
+			 span
+			 span
+
+
+6 广告
+
+7 走心推荐 & 精选会场
+
+8 东家小院
+
+9 每日逛
+
+10 京东快报
+
+11 为你推荐
+
+12 顶部通栏 
+
+单独有一个返回顶部
+
+//=========================================
+  
+
+js效果（轮播图 css3 移动端常用事件  点透问题解决）  
+
+animate.css zepto插件  iscroll滚动插件 
+
+es6  git (git) 自带终端terimal  github 账号  bootstarp  canvas 
+
+
+
+//================
+
+git版本控制系统:  window:git工具   右击桌面 菜单中 gitbashhere 能够正常打开 
+      mac   自带终端 terinmal   下载iterm2 （保存ssh远程）
+
+github 全球最大的程序员(代码 分享 协作开发)交友平台 （使用的是git这种方式进行代码管理的）:
+注册账号
+码云：中文版的github
+
+登陆进去  新建一个仓库  
+
+
+
+//  移动端touch常用事件
+// 封装一个tap事件
+
+// 轮播图效果
+// 。。。。
+
+// 点透问题解决
+// animate.css 多种css3动画 
+// zepto  
+// iscroll  下拉刷新 和 上拉滚动加载
+
+// git 
+
+// es6  
+
+
+

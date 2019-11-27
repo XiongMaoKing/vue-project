@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 第一步引入animate.css -->
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        #box {
+            width: 200px;
+            height: 150px;
+            border: 1px solid #ccc;
+            background-color: yellowgreen;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button>单击删除</button>
+    <div id="box">
+        <input type="button" value="确定">
+        <input type="button" value="取消">
+    </div>
+</body>
+<script>
+    var oBox = document.querySelector('#box');
+    var oBtn = document.querySelector('button');
+    oBtn.onclick = function() {
+        oBox.style.display = "block";
+        oBox.className = "animated bounceInDown";
+    }
+</script>
+
+</html>

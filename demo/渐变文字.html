@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style lang="">
+        #box {
+            width: 400px;
+            height: 300px;
+            border: 10px dotted black;
+            background: url(1-big.jpg) no-repeat;
+            padding: 50px;
+            /* 背景裁切 */
+            /* background-clip: content-box / border-box / padding-box */
+            /* background-clip: content-box; */
+        }
+        
+        span {
+            font-size: 50px;
+            font-weight: bold;
+            background: linear-gradient( to right, blue, aqua);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+
+    <span>前端开发工程师</span>
+</body>
+
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1 视口设置  
+      width=device-width 让当前的可视区域的宽度等于设备的逻辑像素宽, 
+      initial-scale=1.0, 初始化的缩放比例为1 不缩放 
+      user-scalable=no 禁止用户缩放
+      viewport-fit=cover 解决iphonex 前刘海问题
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 苹果设备的菜单栏是否显示  -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果设备的状态栏的样式为黑色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 苹果设备上 对于一些连续的数字 会自动识别为手机号 可以点击拨号 设置为no -->
+    <meta name="format-detection" content="telephone=no">
+    <title>JD-项目</title>
+    <link rel="shortcut icon" href="http://localhost:8080/favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<script>
+    // 获取当前可视区域的宽度
+    // var iW = document.documentElement.clientWidth;
+    // 让当前的html根元素的字体大小设置为 iw/8  得到一份的值 
+    // 判断当前的iw 是否大于1080 如果大于等于1080 
+    // iW = iW > 1080 ? 1080 : iW;
+    // document.querySelector('html').style.fontSize = iW / 8 + 'px';
+</script>
+
+<body>
+    <!-- 头部搜索区域 -->
+    <header>
+        <div class="header_con">
+            <a href="javascript:;"></a>
+            <div class="header_search">
+                <i class="jd_icon"></i>
+                <i class="jd_search_icon"></i>
+                <input type="text" class="search_con" placeholder="投影仪">
+            </div>
+            <a href="javascript:;">登陆</a>
+        </div>
+    </header>
+    <main>
+        <!-- 轮播图区域 -->
+        <div class="jd_lunbo">
+            <!-- 轮播图区域 -->
+            <ul class="lunbo_con clearfix">
+                <li>
+                    <a href="javascript:;"><img src="img/banner1.dpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/banner2.dpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/banner3.dpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/banner4.dpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="img/banner5.dpg" alt=""></a>
+                </li>
+            </ul>
+            <div class="nav">
+                <ol class="clearfix">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+        <!-- 导航列表区域 -->
+        <div class="nav_list clearfix">
+            <div class="nav_list_wraper clearfix">
+                <div class="nav_list_con">
+                    <section>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东超市</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>数码电器</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东服饰</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东生鲜</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东到家</span>
+                        </a>
+
+                    </section>
+                    <section>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>充值缴费</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>9.9元拼</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>领券</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>赚钱</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>PLUS会员</span>
+                        </a>
+
+                    </section>
+                </div>
+                <div class="nav_list_con">
+                    <section>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东超市</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东超市</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东超市</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东超市</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东超市</span>
+                        </a>
+
+                    </section>
+                    <section>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东超市</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东超市</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东超市</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东超市</span>
+                        </a>
+                        <a href="javascript:;">
+                            <span></span>
+                            <span>京东超市</span>
+                        </a>
+
+                    </section>
+                </div>
+            </div>
+            <ol class="nav_list_circle clearfix">
+                <li class="active"></li>
+                <li></li>
+            </ol>
+        </div>
+        <!-- 广告区域 -->
+        <div class="jd_ad">
+            <div class="jd_ad_con clearfix">
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+            </div>
+        </div>
+        <!-- 京东秒杀 -->
+        <section class="jd_kill">
+            <div class="title clearfix">
+                <h3></h3>
+                <strong>6点场</strong>
+                <div class="time">
+                    <div>00</div>
+                    <span>:</span>
+                    <div>27</div>
+                    <span>:</span>
+                    <div>23</div>
+                </div>
+
+                <a href="javascript:;" class="more">
+                    <span>更多秒杀</span>
+                    <i></i>
+                </a>
+            </div>
+            <div class="con">
+                <ul class="clearfix">
+                    <li>
+                        <img src="img/ms01.dpg" alt="">
+                        <div class="text">
+                            <span><i>&yen;</i>199</span>
+                            <del>&yen;208.8</del>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/ms02.dpg" alt="">
+                        <div class="text">
+                            <span><i>&yen;</i>199</span>
+                            <del>&yen;208.8</del>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/ms03.dpg" alt="">
+                        <div class="text">
+                            <span><i>&yen;</i>199</span>
+                            <del>&yen;208.8</del>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/ms04.dpg" alt="">
+                        <div class="text">
+                            <span><i>&yen;</i>199</span>
+                            <del>&yen;208.8</del>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/ms05.dpg" alt="">
+                        <div class="text">
+                            <span><i>&yen;</i>199</span>
+                            <del>&yen;208.8</del>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/ms06.dpg" alt="">
+                        <div class="text">
+                            <span><i>&yen;</i>199</span>
+                            <del>&yen;208.8</del>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/ms07.dpg" alt="">
+                        <div class="text">
+                            <span><i>&yen;</i>199</span>
+                            <del>&yen;208.8</del>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/ms08.dpg" alt="">
+                        <div class="text">
+                            <span><i>&yen;</i>199</span>
+                            <del>&yen;208.8</del>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 新人区域 -->
+        <section class="newArea clearfix">
+            <a href="javascript:;">
+                <img src="img/new01.dpg" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="img/new02.dpg" alt="">
+            </a>
+        </section>
+        <section class="activity">
+            <a href="javascript:;"><img src="img/ad01.dpg" alt=""></a>
+            <a href="javascript:;"><img src="img/ad02.dpg" alt=""></a>
+            <a href="javascript:;"><img src="img/ad03.dpg" alt=""></a>
+        </section>
+        <!-- 走心推荐 -->
+        <h3><img src="img/zxtj.dpg" alt=""></h3>
+        <section class="zxtj clearfix">
+            <div>
+                <p>手机榜</p>
+                <img src="img/zxtj_img1.dpg" alt="">
+                <p>热卖尖货</p>
+            </div>
+            <div>
+                <p>手机榜</p>
+                <img src="img/zxtj_img2.dpg" alt="">
+                <p>热卖尖货</p>
+            </div>
+            <div>
+                <p>手机榜</p>
+                <img src="img/zxtj_img3.dpg" alt="">
+                <p>热卖尖货</p>
+            </div>
+            <div>
+                <p>手机榜</p>
+                <img src="img/zxtj_img4.dpg" alt="">
+                <p>热卖尖货</p>
+            </div>
+        </section>
+        <!-- 精选会场 -->
+        <h3><img src="img/jxhc.dpg" alt=""></h3>
+        <section class="jxhc">
+            <ul class="clearfix">
+                <li>
+                    <img src="img/jxhc_img1.dpg" alt="">
+                    <p>每满100减50</p>
+                    <h4>京东图书</h4>
+                </li>
+                <li>
+                    <img src="img/jxhc_img2.dpg" alt="">
+                    <p>每满100减50</p>
+                    <h4>京东图书</h4>
+                </li>
+                <li>
+                    <img src="img/jxhc_img3.dpg" alt="">
+                    <p>每满100减50</p>
+                    <h4>京东图书</h4>
+                </li>
+                <li>
+                    <img src="img/jxhc_img4.dpg" alt="">
+                    <p>每满100减50</p>
+                    <h4>京东图书</h4>
+                </li>
+                <li>
+                    <img src="img/jxhc_img5.dpg" alt="">
+                    <p>每满100减50</p>
+                    <h4>京东图书</h4>
+                </li>
+                <li>
+                    <img src="img/jxhc_img6.dpg" alt="">
+                    <p>每满100减50</p>
+                    <h4>京东图书</h4>
+                </li>
+                <li>
+                    <img src="img/jxhc_img7.dpg" alt="">
+                    <p>每满100减50</p>
+                    <h4>京东图书</h4>
+                </li>
+                <li>
+                    <img src="img/jxhc_img8.dpg" alt="">
+                    <p>每满100减50</p>
+                    <h4>京东图书</h4>
+                </li>
+            </ul>
+        </section>
+        <!-- 东家小院 -->
+        <h3><img src="img/djxy.dpg" alt=""></h3>
+        <section class="djxy">
+            <div class="top clearfix">
+                <div>
+                    <div class="text">
+                        <span>TCL</span>
+                        <p>TCL专区</p>
+                    </div>
+                    <div class="imgBox clearfix">
+                        <img src="img/djxy_img1.dpg" alt="">
+                        <img src="img/djxy_img2.dpg" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div class="text">
+                        <span>TCL</span>
+                        <p>TCL专区</p>
+                    </div>
+                    <div class="imgBox clearfix">
+                        <img src="img/djxy_img1.dpg" alt="">
+                        <img src="img/djxy_img2.dpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="btm">
+                <ul class="clearfix">
+                    <li>
+                        <div class="btm_text">
+                            <h4>海尔家电</h4>
+                            <p>家电盛宴</p>
+                        </div>
+                        <img src="img/list_img1.dpg" alt="">
+                    </li>
+                    <li>
+                        <div class="btm_text">
+                            <h4>海尔家电</h4>
+                            <p>家电盛宴</p>
+                        </div>
+                        <img src="img/list_img1.dpg" alt="">
+                    </li>
+                    <li>
+                        <div class="btm_text">
+                            <h4>海尔家电</h4>
+                            <p>家电盛宴</p>
+                        </div>
+                        <img src="img/list_img1.dpg" alt="">
+                    </li>
+                    <li>
+                        <div class="btm_text">
+                            <h4>海尔家电</h4>
+                            <p>家电盛宴</p>
+                        </div>
+                        <img src="img/list_img1.dpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 每日逛 -->
+        <h3><img src="img/mrg.dpg" alt=""></h3>
+        <section class="mrg">
+            <ul>
+                <li>
+                    <div class="btm_text">
+                        <h4>海尔家电</h4>
+                        <p>家电盛宴</p>
+                    </div>
+                    <img src="img/list_img1.dpg" alt="">
+                </li>
+                <li>
+                    <div class="btm_text">
+                        <h4>海尔家电</h4>
+                        <p>家电盛宴</p>
+                    </div>
+                    <img src="img/list_img1.dpg" alt="">
+                </li>
+                <li>
+                    <div class="btm_text">
+                        <h4>海尔家电</h4>
+                        <p>家电盛宴</p>
+                    </div>
+                    <img src="img/list_img1.dpg" alt="">
+                </li>
+                <li>
+                    <div class="btm_text">
+                        <h4>海尔家电</h4>
+                        <p>家电盛宴</p>
+                    </div>
+                    <img src="img/list_img1.dpg" alt="">
+                </li>
+                <li>
+                    <div class="btm_text">
+                        <h4>海尔家电</h4>
+                        <p>家电盛宴</p>
+                    </div>
+                    <img src="img/list_img1.dpg" alt="">
+                </li>
+                <li>
+                    <div class="btm_text">
+                        <h4>海尔家电</h4>
+                        <p>家电盛宴</p>
+                    </div>
+                    <img src="img/list_img1.dpg" alt="">
+                </li>
+                <li>
+                    <div class="btm_text">
+                        <h4>海尔家电</h4>
+                        <p>家电盛宴</p>
+                    </div>
+                    <img src="img/list_img1.dpg" alt="">
+                </li>
+                <li>
+                    <div class="btm_text">
+                        <h4>海尔家电</h4>
+                        <p>家电盛宴</p>
+                    </div>
+                    <img src="img/list_img1.dpg" alt="">
+                </li>
+            </ul>
+        </section>
+        <!-- 京东快报 -->
+        <section class="jdkb clearfix">
+            <h4>
+                <img src="img/jdkb.dpg" alt="">
+            </h4>
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <span>HOT</span> 速冻饺子一步变煎饺，这美味不信你不喜欢
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>最新</span> 多功能时尚夜光腕表，开启简约风尚
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>热门</span>透过味蕾，这杯自制鸡尾酒送给你
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>推荐</span> 耐克气垫跑步鞋，都市健跑更自在
+                    </a>
+                </li>
+
+            </ul>
+            <a href="javascript:;" class="more">更多</a>
+        </section>
+        <!-- 为你推荐 -->
+        <h3><img src="img/wntj.png" alt=""></h3>
+        <section class="wntj clearfix">
+            <div class="product">
+                <img src="img/product_img1.webp" alt="">
+                <p>烈焰战队 工作服套装 男春秋长袖劳保服工装套装 全棉质户外汽修工程服 四兜大口袋保安服 可定制 春秋蓝色长袖四兜套装（上衣＋裤子） 185（建议170-185斤）</p>
+                <div>
+                    <span>
+                        <em>&yen;</em>89
+                    </span>
+                    <strong>满减</strong>
+                    <i>看相似</i>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/product_img1.webp" alt="">
+                <p>烈焰战队 工作服套装 男春秋长袖劳保服工装套装 全棉质户外汽修工程服 四兜大口袋保安服 可定制 春秋蓝色长袖四兜套装（上衣＋裤子） 185（建议170-185斤）</p>
+                <div>
+                    <span>
+                            <em>&yen;</em>89
+                        </span>
+                    <strong>满减</strong>
+                    <i>看相似</i>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/product_img1.webp" alt="">
+                <p>烈焰战队 工作服套装 男春秋长袖劳保服工装套装 全棉质户外汽修工程服 四兜大口袋保安服 可定制 春秋蓝色长袖四兜套装（上衣＋裤子） 185（建议170-185斤）</p>
+                <div>
+                    <span>
+                                <em>&yen;</em>89
+                            </span>
+                    <strong>满减</strong>
+                    <i>看相似</i>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/product_img1.webp" alt="">
+                <p>烈焰战队 工作服套装 男春秋长袖劳保服工装套装 全棉质户外汽修工程服 四兜大口袋保安服 可定制 春秋蓝色长袖四兜套装（上衣＋裤子） 185（建议170-185斤）</p>
+                <div>
+                    <span>
+                                    <em>&yen;</em>89
+                                </span>
+                    <strong>满减</strong>
+                    <i>看相似</i>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/product_img1.webp" alt="">
+                <p>烈焰战队 工作服套装 男春秋长袖劳保服工装套装 全棉质户外汽修工程服 四兜大口袋保安服 可定制 春秋蓝色长袖四兜套装（上衣＋裤子） 185（建议170-185斤）</p>
+                <div>
+                    <span>
+                                        <em>&yen;</em>89
+                                    </span>
+                    <strong>满减</strong>
+                    <i>看相似</i>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/product_img1.webp" alt="">
+                <p>烈焰战队 工作服套装 男春秋长袖劳保服工装套装 全棉质户外汽修工程服 四兜大口袋保安服 可定制 春秋蓝色长袖四兜套装（上衣＋裤子） 185（建议170-185斤）</p>
+                <div>
+                    <span>
+                                            <em>&yen;</em>89
+                                        </span>
+                    <strong>满减</strong>
+                    <i>看相似</i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 底部通栏 -->
+    <nav>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+    </nav>
+
+    <!-- 返回顶部 -->
+    <a href="javascript:;" class="goTop"></a>
+</body>
+<!-- zeptojs已经定制好了 -->
+<script src="js/zepto.js"></script>
+<script src="js/index.js"></script>
+
+</html>
